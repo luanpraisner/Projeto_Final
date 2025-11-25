@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<!-- Define o documento como HTML5 -->
+
+<html lang="pt-BR">
+<!-- Define que o idioma principal da página é português do Brasil -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define o padrão de caracteres (permite acentos e caracteres especiais) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz a página se ajustar ao tamanho da tela (responsividade) -->
+
+    <title>AutoPrime - Contato</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo CSS externo -->
+
+    <!-- ESTILO DO MENU (versão interna, poderia ir para o CSS externo) -->
+    <style>
+        /* Botão hambúrguer que só aparece no celular */
+        .menu-btn {
+            display: none;
+            /* Oculto no desktop */
+            font-size: 32px;
+            /* Tamanho do ícone */
+            color: #fff;
+            /* Cor do ícone */
+            cursor: pointer;
+            /* Cursor de mão ao passar o mouse */
+        }
+
+        nav {
+            display: flex;
+            /* Links lado a lado */
+            gap: 20px;
+            /* Espaçamento entre os itens */
+        }
+
+        /* ======= RESPONSIVO (TELAS ATÉ 768PX) ======= */
+        @media (max-width: 768px) {
+
+            nav {
+                position: absolute;
+                /* Posiciona o menu sobre a tela */
+                top: 70px;
+                /* Distância do topo */
+                right: 0;
+                /* Encostado à direita */
+                background: #111;
+                /* Fundo preto */
+                width: 200px;
+                /* Largura do menu */
+                display: none;
+                /* Escondido inicialmente */
+                flex-direction: column;
+                /* Links em coluna */
+                padding: 20px;
+                /* Espaçamento interno */
+                border-left: 2px solid red;
+                /* Linha vermelha decorativa */
+            }
+
+            nav a {
+                margin: 10px 0;
+                /* Espaçamento entre links */
+            }
+
+            /* Exibe o botão hambúrguer no celular */
+            .menu-btn {
+                display: block;
+            }
+
+            /* Quando .ativo é adicionada via JS, o menu aparece */
+            nav.ativo {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====== CABEÇALHO ====== -->
+    <header
+        style="background:#111; color:#fff; padding:20px; display:flex; justify-content:space-between; align-items:center;">
+        <!-- Cabeçalho com fundo preto, texto branco e itens espaçados -->
+
+        <div class="logo" style="font-size:26px; font-weight:bold;">
+            Auto<span style="color:red;">Prime</span>
+            <!-- Logo com "Prime" em vermelho -->
+        </div>
+
+        <!-- BOTÃO HAMBÚRGUER (somente mobile) -->
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <!-- O onclick chama a função que abre/fecha o menu -->
+
+        <!-- MENU DE NAVEGAÇÃO -->
+        <nav id="menu">
+            <a href="index.html">Início</a>
+            <a href="carros.html">Carros à Venda</a>
+            <a href="contato.html" class="ativo">Contato</a>
+            <!-- Link atual recebe classe ativo -->
+        </nav>
+    </header>
+
+    <!-- ====== SEÇÃO CONTATO ====== -->
+    <section class="contato">
+        <!-- Seção principal com o formulário de contato -->
+
+        <h2>Fale com o Vendedor</h2>
+        <!-- Título da seção -->
+
+        <form>
+            <!-- Formulário de envio de mensagem -->
+
+            <input type="text" placeholder="Seu nome" required>
+            <!-- Campo nome (obrigatório) -->
+
+            <input type="email" placeholder="Seu e-mail" required>
+            <!-- Campo e-mail com validação automática -->
+
+            <input type="tel" placeholder="Seu telefone (opcional)">
+            <!-- Campo de telefone (não obrigatório) -->
+
+            <textarea rows="5" placeholder="Digite sua mensagem..." required></textarea>
+            <!-- Área de mensagem com 5 linhas -->
+
+            <button type="submit">Enviar Mensagem</button>
+            <!-- Botão de envio -->
+        </form>
+    </section>
+
+    <!-- ====== RODAPÉ ====== -->
+    <footer>
+        <p>© 2025 AutoPrime - Todos os direitos reservados.</p>
+        <!-- Rodapé simples com direitos autorais -->
+    </footer>
+
+    <!-- SCRIPT DO MENU (abre e fecha) -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            /* Seleciona o <nav> pelo ID */
+
+            menu.classList.toggle("ativo");
+            /* Adiciona/remove a classe "ativo", mostrando ou escondendo o menu */
+        }
+    </script>
+
+</body>
+
+</html>

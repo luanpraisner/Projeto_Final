@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!-- Define que o documento segue o padrão HTML5 -->
+
+<html lang="pt-BR">
+<!-- Informa que o conteúdo da página está em português brasileiro -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Permite caracteres especiais (acentos, ç etc.) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Deixa a página responsiva para celulares -->
+
+    <title>AutoPrime - Carros à Venda</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo CSS externo -->
+
+    <!-- ESTILO DO HAMBÚRGUER (pode ser movido para style.css se preferir) -->
+    <style>
+        .menu-btn {
+            display: none;
+            /* Esconde no desktop */
+            font-size: 32px;
+            /* Tamanho do ícone */
+            color: #fff;
+            /* Cor do ícone */
+            cursor: pointer;
+            /* Muda o cursor para mão */
+        }
+
+        nav {
+            display: flex;
+            /* Menu horizontal */
+            gap: 20px;
+            /* Espaço entre itens */
+        }
+
+        @media (max-width: 768px) {
+            /* Regras para telas pequenas */
+
+            nav {
+                position: absolute;
+                /* Menu sobreposto */
+                top: 70px;
+                /* Distância do topo */
+                right: 0;
+                /* Encostado à direita */
+                background: #111;
+                /* Fundo preto */
+                width: 220px;
+                /* Largura do menu */
+                display: none;
+                /* Escondido inicialmente */
+                flex-direction: column;
+                /* Itens um abaixo do outro */
+                padding: 20px;
+                /* Espaçamento interno */
+                border-left: 3px solid red;
+                /* Linha vermelha decorativa */
+            }
+
+            nav a {
+                margin: 10px 0;
+                /* Espaçamento entre os links */
+            }
+
+            .menu-btn {
+                display: block;
+                /* Mostra o botão hambúrguer no mobile */
+            }
+
+            nav.ativo {
+                display: flex;
+                /* Quando ativado pelo JS, aparece */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====== CABEÇALHO ====== -->
+    <header
+        style="background:#111; color:#fff; padding:20px; display:flex; justify-content:space-between; align-items:center;">
+        <!-- Cabeçalho: fundo preto, textos brancos, espaçado -->
+
+        <div class="logo" style="font-size:26px; font-weight:bold;">
+            Auto<span style="color:red;">Prime</span>
+            <!-- Logo com "Prime" em vermelho -->
+        </div>
+
+        <!-- BOTÃO HAMBÚRGUER -->
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <!-- Ícone ☰ que abre/fecha o menu -->
+
+        <!-- MENU RESPONSIVO -->
+        <nav id="menu">
+            <a href="index.html">Início</a>
+            <!-- Link para página inicial -->
+
+            <a href="carros.html" class="ativo">Carros à Venda</a>
+            <!-- Página atual (ativo) -->
+
+            <a href="contato.html">Contato</a>
+            <!-- Link da página de contato -->
+        </nav>
+    </header>
+
+    <!-- ======== SEÇÃO DE CARROS ======== -->
+    <section class="lista-carros">
+        <!-- Container principal da listagem de carros -->
+
+        <h2>Carros à Venda</h2>
+        <!-- Título da seção -->
+
+        <div class="carros-container">
+            <!-- Contêiner que agrupa todos os carros -->
+
+            <!-- ==== BMW ==== -->
+            <div class="carro">
+                <!-- Cada bloco representa um carro à venda -->
+
+                <a href="../Projeto_/Carros/m5cs.html">
+                    <!-- Link para página individual do carro -->
+
+                    <img src="../Projeto_/imagem/m5.webp" alt="BMW M5 CS">
+                    <!-- Imagem do carro -->
+
+                    <h3>BMW M5 CS</h3>
+                    <!-- Nome do carro -->
+
+                    <p>4.4 V8 Biturbo | 635 cv | R$ 1.200.000</p>
+                    <!-- Informações técnicas + preço -->
+                </a>
+            </div>
+
+            <div class="carro">
+                <a href="../Projeto_/Carros/m4.html">
+                    <img src="../Projeto_/imagem/m4.jpg" alt="BMW M4 Coupé">
+                    <h3>BMW M4 Coupé</h3>
+                    <p>3.0 L6 Biturbo | 510 cv | R$ 900.000</p>
+                </a>
+            </div>
+
+            <!-- ==== FERRARI ==== -->
+            <div class="carro">
+                <a href="../Projeto_/Carros/sf90.html">
+                    <img src="../Projeto_/imagem/SF90.jpeg" alt="Ferrari SF90">
+                    <h3>Ferrari SF90 Stradale</h3>
+                    <p>4.0 V8 Híbrido | 1000 cv | R$ 4.500.000</p>
+                </a>
+            </div>
+
+            <div class="carro">
+                <a href="../Projeto_/Carros/f8.html">
+                    <img src="../Projeto_/imagem/F8.jpeg" alt="Ferrari F8 Tributo">
+                    <h3>Ferrari F8 Spider</h3>
+                    <p>3.9 V8 Biturbo | 720 cv | R$ 3.000.000</p>
+                </a>
+            </div>
+
+            <!-- ==== LAMBORGHINI ==== -->
+            <div class="carro">
+                <a href="../Projeto_/Carros/huracan.html">
+                    <img src="../Projeto_/imagem/Huracan.webp" alt="Lamborghini Huracan EVO">
+                    <h3>Lamborghini Huracán EVO</h3>
+                    <p>5.2 V10 | 640 cv | R$ 3.200.000</p>
+                </a>
+            </div>
+
+            <div class="carro">
+                <a href="../Projeto_/Carros/svj.html">
+                    <img src="../Projeto_/imagem/SVJ.jpg" alt="Lamborghini Aventador SVJ">
+                    <h3>Lamborghini Aventador SVJ</h3>
+                    <p>6.5 V12 | 770 cv | R$ 5.000.000</p>
+                </a>
+            </div>
+
+            <!-- ==== AUDI ==== -->
+            <div class="carro">
+                <a href="../Projeto_/Carros/rs7.html">
+                    <img src="../Projeto_/imagem/A7.jpg" alt="Audi RS7">
+                    <h3>Audi RS7 Sportback</h3>
+                    <p>4.0 V8 Biturbo | 600 cv | R$ 1.200.000</p>
+                </a>
+            </div>
+
+            <div class="carro">
+                <a href="../Projeto_/Carros/r8.html">
+                    <img src="../Projeto_/imagem/r8.jpg" alt="Audi R8 V10">
+                    <h3>Audi R8 V10 Performance</h3>
+                    <p>5.2 V10 | 620 cv | R$ 2.000.000</p>
+                </a>
+            </div>
+
+            <!-- ==== MERCEDES ==== -->
+            <div class="carro">
+                <a href="../Projeto_/Carros/gt63.html">
+                    <img src="../Projeto_/imagem/GT63.jpeg" alt="Mercedes-AMG GT63S">
+                    <h3>Mercedes-AMG GT 63S</h3>
+                    <p>4.0 V8 Biturbo | 639 cv | R$ 1.800.000</p>
+                </a>
+            </div>
+
+            <!-- ==== DODGE ==== -->
+            <div class="carro">
+                <a href="../Projeto_/Carros/demon.html">
+                    <img src="../Projeto_/imagem/STRDemon.webp" alt="Dodge Challenger SRT Demon">
+                    <h3>Dodge Challenger SRT Demon</h3>
+                    <p>6.2 V8 Supercharged | 1025 cv | R$ 1.500.000</p>
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>© 2025 AutoPrime - Todos os direitos reservados.</p>
+        <!-- Rodapé simples com aviso de direitos -->
+    </footer>
+
+    <!-- SCRIPT DO MENU -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            /* Pega o menu pelo ID */
+
+            menu.classList.toggle("ativo");
+            /* Ativa ou desativa a classe para abrir/fechar o menu */
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!-- Define que o documento segue o padrão HTML5 -->
+
+<html lang="pt-BR">
+<!-- Define que o idioma principal do site é o português brasileiro -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres (UTF-8 suporta acentos e caracteres especiais) -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz o layout se ajustar ao tamanho da tela (responsividade em celulares) -->
+
+    <title>AutoPrime - Início</title>
+    <!-- Título que aparece na aba do navegador -->
+
+    <link rel="stylesheet" href="style.css">
+    <!-- Importa o arquivo CSS externo -->
+
+    <!-- IMPORTANTE: Ícone do menu -->
+    <style>
+        /* ===== MENU HAMBÚRGUER ===== */
+
+        .menu-btn {
+            display: none;
+            /* Esconde o botão no desktop */
+            font-size: 30px;
+            /* Tamanho do ícone */
+            color: #fff;
+            /* Cor do ícone */
+            cursor: pointer;
+            /* Cursor de mão ao passar o mouse */
+        }
+
+        nav {
+            display: flex;
+            /* Links lado a lado */
+            gap: 20px;
+            /* Espaçamento entre os itens do menu */
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                /* Permite posicionamento livre */
+                top: 70px;
+                /* Distância do topo */
+                right: 0;
+                /* Encostado à direita */
+                background: #111;
+                /* Fundo preto do menu mobile */
+                width: 200px;
+                /* Largura do menu lateral */
+                display: none;
+                /* Escondido por padrão no mobile */
+                flex-direction: column;
+                /* Itens um abaixo do outro */
+                padding: 20px;
+                /* Espaçamento interno */
+                border-left: 2px solid red;
+                /* Linha vermelha na lateral */
+            }
+
+            nav a {
+                margin: 10px 0;
+                /* Espaçamento vertical entre os links */
+            }
+
+            .menu-btn {
+                display: block;
+                /* Mostra o botão hambúrguer no mobile */
+            }
+
+            nav.ativo {
+                display: flex;
+                /* Exibe o menu quando recebe a classe 'ativo' */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ======== CABEÇALHO ======== -->
+    <header
+        style="background:#111; color:#fff; padding:20px; display:flex; justify-content:space-between; align-items:center;">
+        <!-- Cabeçalho com fundo preto e texto branco -->
+
+        <div class="logo" style="font-size:26px; font-weight:bold;">
+            Auto<span style="color:red;">Prime</span>
+            <!-- Logo do site com parte vermelha -->
+        </div>
+
+        <!-- BOTÃO HAMBÚRGUER -->
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+        <!-- Ícone de menu que ativa a função toggleMenu() -->
+
+        <!-- MENU -->
+        <nav id="menu">
+            <!-- Menu de navegação -->
+            <a href="index.html" class="ativo">Início</a>
+            <a href="carros.html">Carros à Venda</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- ======== SEÇÃO DE DESTAQUE ======== -->
+    <section class="banner">
+        <!-- Área principal de destaque do site -->
+
+        <div class="conteudo-banner">
+            <!-- Conteúdo dentro do banner -->
+
+            <h1 style="color: red;">O carro dos seus sonhos está aqui</h1>
+            <!-- Título principal -->
+
+            <p>As melhores marcas, os melhores preços e o melhor atendimento.</p>
+            <!-- Pequena descrição -->
+
+            <a href="carros.html" class="btn">Ver Carros</a>
+            <!-- Botão chamando para a página de carros -->
+        </div>
+    </section>
+
+    <!-- ======== RODAPÉ ======== -->
+    <footer>
+        <p>© 2025 AutoPrime - Todos os direitos reservados.</p>
+        <!-- Rodapé simples com aviso de direitos autorais -->
+    </footer>
+
+    <!-- SCRIPT DO MENU -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            /* Seleciona o elemento <nav> pelo ID */
+
+            menu.classList.toggle("ativo");
+            /* Alterna a classe "ativo" → mostra ou esconde o menu no mobile */
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+/* ======= RESET ======= */
+* {
+    margin: 0;
+    /* Remove a margem padrão de todos os elementos */
+    padding: 0;
+    /* Remove o espaçamento interno padrão de todos os elementos */
+    box-sizing: border-box;
+    /* Faz com que padding e borda não aumentem o tamanho total do elemento */
+    font-family: "Poppins", sans-serif;
+    /* Define a fonte padrão da página */
+}
+
+/* ======= CABEÇALHO ======= */
+header {
+    background: #111;
+    /* Define fundo preto para o cabeçalho */
+    color: #fff;
+    /* Define o texto em branco */
+    display: flex;
+    /* Organiza os itens (logo e menu) lado a lado */
+    justify-content: space-between;
+    /* Coloca a logo à esquerda e o menu à direita */
+    align-items: center;
+    /* Centraliza verticalmente o conteúdo do header */
+    padding: 20px 60px;
+    /* Espaçamento interno (20px em cima/baixo e 60px nas laterais) */
+    position: sticky;
+    /* Fixa o cabeçalho ao topo quando rolar a página */
+    top: 0;
+    /* Mantém fixo no topo */
+    z-index: 10;
+    /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+.logo {
+    font-size: 28px;
+    /* Tamanho da fonte da logo */
+    font-weight: 700;
+    /* Deixa o texto da logo em negrito */
+}
+
+.logo span {
+    color: #ff0000;
+    /* Deixa a parte "Prime" da logo vermelha */
+}
+
+nav a {
+    color: white;
+    /* Links do menu em branco */
+    text-decoration: none;
+    /* Remove o sublinhado dos links */
+    margin-left: 25px;
+    /* Espaço entre os links do menu */
+    font-weight: 500;
+    /* Peso médio da fonte */
+    transition: 0.3s;
+    /* Transição suave para efeitos de hover */
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #ff0000;
+    /* Muda o link para vermelho quando passa o mouse ou quando estiver ativo */
+}
+
+/* ======= BANNER ======= */
+.banner {
+    height: 90vh;
+    /* Faz o banner ocupar 90% da altura da tela */
+    background: url("../Projeto_/imagem/banner4k.jpg") center/cover no-repeat;
+    /* Define a imagem do banner centralizada, cobrindo toda a área, sem repetir */
+    display: flex;
+    /* Usa flexbox para alinhar o conteúdo interno */
+    align-items: center;
+    /* Centraliza verticalmente o conteúdo */
+    justify-content: center;
+    /* Centraliza horizontalmente o conteúdo */
+    color: white;
+    /* Texto dentro do banner em branco */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.conteudo-banner h1 {
+    font-size: 48px;
+    /* Tamanho grande para o título */
+    text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    /* Adiciona sombra no texto para destacar sobre a imagem */
+}
+
+.conteudo-banner p {
+    margin: 15px 0;
+    /* Espaço acima e abaixo do parágrafo */
+    font-size: 18px;
+    /* Tamanho médio do texto */
+}
+
+.btn {
+    background: #ff0000;
+    /* Fundo vermelho no botão */
+    padding: 12px 25px;
+    /* Espaçamento interno do botão */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    text-decoration: none;
+    /* Remove o sublinhado */
+    color: white;
+    /* Texto branco */
+    font-weight: 600;
+    /* Fonte mais grossa */
+    transition: 0.3s;
+    /* Transição suave para hover */
+}
+
+.btn:hover {
+    background: #cc0000;
+    /* Escurece o vermelho ao passar o mouse */
+}
+
+/* ======= SEÇÃO SOBRE ======= */
+.sobre {
+    text-align: center;
+    /* Centraliza o texto da seção */
+    padding: 60px 80px;
+    /* Espaçamento interno */
+}
+
+.sobre h2 {
+    color: #ffffff;
+    /* Cor branca para o título */
+    margin-bottom: 10px;
+    /* Espaçamento abaixo do título */
+}
+
+.p {
+    color: #ffffff;
+    /* Cor branca para o texto */
+}
+
+/* ======= LISTA DE CARROS ======= */
+.lista-carros {
+    padding: 60px 80px;
+    /* Espaçamento interno */
+    background: #f5f5f5;
+    /* Fundo cinza claro */
+
+}
+
+.lista-carros h2 {
+    text-align: center;
+    /* Centraliza o título */
+    color: #ff0000;
+    /* Cor vermelha */
+    margin-bottom: 40px;
+    /* Espaçamento abaixo do título */
+}
+
+.carros-container {
+    display: grid;
+    /* Usa grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* Cria colunas automáticas que se ajustam ao tamanho da tela */
+    gap: 30px;
+    /* Espaço entre os cards */
+}
+
+.carro {
+    background: white;
+    /* Fundo branco para cada card */
+    border-radius: 12px;
+    /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra leve */
+    overflow: hidden;
+    /* Esconde o que ultrapassar as bordas */
+    text-align: center;
+    /* Centraliza o conteúdo dentro do card */
+    transition: 0.3s;
+    /* Suaviza a animação do hover */
+}
+
+a {
+    text-decoration: none !important;
+    /* Para remover a linha roxa que aparece embaixo do link */
+}
+
+
+.carro:hover {
+    transform: scale(1.05);
+    /* Aumenta levemente o tamanho do card ao passar o mouse */
+}
+
+.carro img {
+    width: 100%;
+    /* Imagem ocupa toda a largura do card */
+    height: 200px;
+    /* Altura fixa */
+    object-fit: cover;
+    /* Corta a imagem para caber sem distorcer */
+}
+
+.carro h3 {
+    margin-top: 10px;
+    /* Espaçamento acima do título do carro */
+    color: #222;
+    /* Cor do texto escura */
+}
+
+.carro p {
+    color: #555;
+    /* Cinza médio para o texto */
+    padding: 10px;
+    /* Espaçamento interno */
+}
+
+/* ======= CONTATO ======= */
+.contato {
+    padding: 60px 80px;
+    /* Espaçamento interno */
+    text-align: center;
+    /* Centraliza o texto */
+}
+
+.contato h2 {
+    color: #ff0000;
+    /* Cor vermelha para o título */
+}
+
+form {
+    display: flex;
+    /* Usa flexbox para organizar os campos */
+    flex-direction: column;
+    /* Coloca os campos em coluna */
+    max-width: 500px;
+    /* Largura máxima do formulário */
+    margin: 30px auto;
+    /* Centraliza o formulário na página */
+}
+
+input,
+textarea {
+    margin: 10px 0;
+    /* Espaçamento entre os campos */
+    padding: 12px;
+    /* Espaçamento interno */
+    border: 1px solid #ccc;
+    /* Borda cinza clara */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+}
+
+button {
+    background: #ff0000;
+    /* Fundo vermelho do botão */
+    color: white;
+    /* Texto branco */
+    padding: 12px;
+    /* Espaçamento interno */
+    border: none;
+    /* Remove a borda padrão */
+    border-radius: 8px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Mostra a mãozinha ao passar o mouse */
+    font-weight: bold;
+    /* Texto em negrito */
+}
+
+button:hover {
+    background: #cc0000;
+    /* Escurece o botão ao passar o mouse */
+}
+
+/* ======= RODAPÉ ======= */
+footer {
+    background: #111;
+    /* Fundo preto */
+    color: white;
+    /* Texto branco */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 15px;
+    /* Espaçamento interno */
+    margin-top: auto;
+    /* Empurra o footer para o fim da página (em layouts flex) */
+    position: fixed;
+    /* Fixa o rodapé na parte inferior da tela */
+    bottom: 0;
+    /* Gruda o rodapé no fundo da página */
+    left: 0;
+    /* Alinha o rodapé à esquerda */
+    width: 100%;
+    /* Faz o rodapé ocupar toda a largura da tela */
+    background-color: #111;
+    /* Garante a cor preta do fundo */
+    color: white;
+    /* Garante a cor branca do texto */
+    text-align: center;
+    /* Centraliza o texto */
+    padding: 15px 0;
+    /* Espaçamento interno em cima e embaixo */
+}
+
+
+
+
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    /* Define a fonte principal como Arial; se não disponível, usa qualquer fonte sem serifa */
+
+    background: #111;
+    /* Cor de fundo do site (cinza bem escuro) */
+
+    color: #fff;
+    /* Cor padrão do texto (branco) */
+
+    margin: 0;
+    /* Remove a margem padrão que o navegador aplica no body */
+}
+
+
+/* ====== CABEÇALHO ====== */
+header {
+    background: #000;
+    /* Cor de fundo do header (preto) */
+
+    padding: 20px;
+    /* Espaçamento interno para afastar os elementos das bordas */
+
+    display: flex;
+    /* Coloca os itens do header (logo e menu, se houver) lado a lado */
+
+    justify-content: space-between;
+    /* Um elemento fica à esquerda e o outro à direita */
+
+    align-items: center;
+    /* Alinha os itens verticalmente ao centro */
+}
+
+
+/* Estilo do nome/marca */
+.logo {
+    font-size: 28px;
+    /* Aumenta o tamanho da fonte da logo */
+
+    font-weight: bold;
+    /* Deixa o texto da logo em negrito */
+    
+}
+
+
+/* Parte da logo destacada com cor */
+.logo span {
+    color: #f00;
+    /* O texto dentro do <span> fica vermelho (#f00) */
+    
+}
+
+
+/* ====== CONTAINER PRINCIPAL ====== */
+.container {
+    padding: 20px;
+    /* Espaçamento interno do container */
+
+    max-width: 900px;
+    /* Limita a largura máxima do conteúdo */
+
+    margin: auto;
+    /* Centraliza o container horizontalmente */
+}
+
+
+/* ====== GALERIA DE IMAGENS ====== */
+.galeria img {
+    width: 100%;
+    /* A imagem ocupa toda a largura disponível do container */
+
+    border-radius: 10px;
+    /* Arredonda os cantos da imagem */
+
+    margin-bottom: 15px;
+    /* Espaço abaixo de cada imagem */
+}
+
+
+/* Espaçamento dos títulos */
+h1,
+h2 {
+    margin-bottom: 10px;
+    /* Espaço embaixo dos títulos h1 e h2 */
+}
+
+
+/* Espaçamento dos itens da lista */
+ul li {
+    margin: 6px 0;
+    /* Espaçamento vertical entre os itens da lista */
+}
+
+
+/* ====== BOTÃO/VOLTA ====== */
+.voltar {
+    display: inline-block;
+    /* Deixa o link com comportamento de botão, aceitando padding e margin */
+
+    padding: 10px 20px;
+    /* Tamanho do botão: 10px em cima/baixo e 20px nas laterais */
+
+    background: #f00;
+    /* Cor de fundo vermelha */
+
+    color: #fff;
+    /* Cor do texto branca */
+
+    text-decoration: none;
+    /* Remove o sublinhado do link */
+
+    border-radius: 8px;
+    /* Deixa o botão com cantos arredondados */
+
+    margin-top: 20px;
+    /* Adiciona espaço acima do botão */
+}
+
+
