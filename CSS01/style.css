@@ -67,7 +67,7 @@ nav a.ativo {
 .banner {
     height: 90vh;
     /* Faz o banner ocupar 90% da altura da tela */
-    background: url("imagem/banner4k.jpg") center/cover no-repeat;
+    background: url("../imagem/banner4k.jpg") center/cover no-repeat;
     /* Define a imagem do banner centralizada, cobrindo toda a área, sem repetir */
     display: flex;
     /* Usa flexbox para alinhar o conteúdo interno */
