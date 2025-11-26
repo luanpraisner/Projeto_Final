@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoPrime - Sobre Nós</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0c0c0c;
+            color: #fff;
+            font-family: "Poppins", sans-serif;
+        }
+
+        /* ====== CABEÇALHO ====== */
+        header {
+            background: #111;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: red;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        /* BOTÃO DO MENU MOBILE */
+        .menu-btn {
+            display: none;
+            font-size: 32px;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        /* ====== RESPONSIVO ====== */
+        @media (max-width: 768px) {
+            nav {
+                position: absolute;
+                top: 70px;
+                right: 0;
+                background: #111;
+                width: 200px;
+                flex-direction: column;
+                border-left: 2px solid red;
+                padding: 20px;
+                display: none;
+            }
+
+            nav a {
+                margin: 10px 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            nav.ativo {
+                display: flex;
+            }
+        }
+
+        /* ====== ÁREA PRINCIPAL ====== */
+        .sobre {
+            max-width: 900px;
+            margin: 60px auto;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .sobre h2 {
+            color: red;
+            font-size: 34px;
+            margin-bottom: 20px;
+        }
+
+        .sobre p {
+            line-height: 1.6;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* ====== DESTAQUES ====== */
+        .cards {
+            display: flex;
+            gap: 20px;
+            margin-top: 50px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: #111;
+            width: 280px;
+            padding: 25px;
+            border-radius: 10px;
+            border-bottom: 3px solid red;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .card h3 {
+            color: red;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 15px;
+            opacity: 0.8;
+        }
+
+        /* ====== RODAPÉ ====== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #888;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ====== CABEÇALHO ====== -->
+    <header>
+        <div class="logo">Auto<span>Prime</span></div>
+
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+        <nav id="menu">
+            <a href="../../index.html">Início</a>
+            <a href="carros.html">Carros à Venda</a>
+            <a href="sobre.html" style="color:red;">Sobre Nós</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <!-- ====== SEÇÃO SOBRE ====== -->
+    <section class="sobre">
+        <h2>Sobre a AutoPrime</h2>
+
+        <p>
+            Fundada por <strong>Luan Praisner</strong> e <strong>Pedro Victor</strong>, a AutoPrime acumula
+            mais de <strong>12 anos de experiência</strong> no mercado de veículos de luxo. Nossa trajetória
+            começou com a paixão por carros esportivos de alto desempenho e evoluiu para um negócio sólido,
+            respeitado e admirado em todo o Brasil. Ao longo dos anos, construímos uma reputação baseada na
+            transparência, credibilidade e na entrega da mais alta qualidade automotiva.
+        </p>
+
+        <p>
+            Trabalhamos exclusivamente com automóveis acima de <strong>R$ 700.000,00</strong>, cuidadosamente
+            selecionados para um público exigente. Não vendemos apenas carros — entregamos exclusividade, estilo
+            de vida e uma experiência que vai além da compra. Cada cliente é atendido de forma personalizada,
+            recebendo consultoria especializada para encontrar o veículo perfeito de acordo com seu perfil e
+            suas ambições.
+        </p>
+
+        <p>
+            Hoje, a AutoPrime é referência nacional em carros esportivos, confortáveis e raros. Nosso
+            estoque inclui modelos icônicos, séries limitadas e máquinas que representam o ápice da engenharia
+            automotiva mundial. Nosso compromisso é proporcionar não apenas um produto de excelência, mas uma
+            jornada inesquecível desde o primeiro contato até a entrega das chaves.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Experiência</h3>
+                <p>
+                    São mais de 12 anos atuando no segmento de veículos premium, acompanhando as tendências e
+                    transformações do mercado automotivo mundial. Durante esse período, desenvolvemos parcerias
+                    estratégicas com fornecedores certificados, garantindo total procedência e segurança em cada
+                    compra. Nossa equipe é treinada para orientar o cliente com precisão técnica, conhecimento
+                    detalhado e dedicação. É por isso que a AutoPrime se tornou referência em confiança.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Performance e Luxo</h3>
+                <p>
+                    Selecionamos apenas carros capazes de entregar potência, tecnologia e conforto em níveis
+                    superiores aos padrões convencionais. Cada veículo passa por avaliação minuciosa antes de
+                    entrar em nosso catálogo, atendendo requisitos que vão desde a originalidade até o estado
+                    estrutural impecável. Aqui, o cliente encontra motores impressionantes, design exclusivo e
+                    interiores projetados para proporcionar prazer absoluto ao dirigir. Comprar na AutoPrime
+                    significa entrar para um universo onde o comum não existe.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Exclusividade e Prestígio</h3>
+                <p>
+                    Muitos dos nossos modelos possuem tiragens limitadas ou são difíceis de encontrar no mercado,
+                    tornando cada aquisição um investimento único. A AutoPrime atende clientes que desejam se
+                    destacar com veículos que representam status, personalidade e poder. Nosso atendimento
+                    especializado garante que cada negociação seja clara, segura e discreta. Aqui, não vendemos
+                    carros — entregamos um símbolo de conquista, reservado a poucos.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ====== RODAPÉ ====== -->
+    <footer>
+        © 2025 AutoPrime - Todos os direitos reservados.
+    </footer>
+
+    <!-- SCRIPT DO MENU -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("ativo");
+        }
+    </script>
+
+</body>
+
+</html>
