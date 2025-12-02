@@ -15,6 +15,25 @@
         }
 
         /* ====== CABEÇALHO ====== */
+
+        /* Deixe o menu SEMPRE por cima */
+        nav,
+        .menu,
+        .menu-lateral {
+            position: relative;
+            z-index: 9999;
+        }
+
+        /* Garanta que o conteúdo NÃO fique por cima */
+        section,
+        .sobre,
+        .banner,
+        main {
+            position: relative;
+            z-index: 1;
+        }
+
+
         header {
             background: #111;
             color: #fff;
